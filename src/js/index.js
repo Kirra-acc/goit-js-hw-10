@@ -38,7 +38,7 @@ fetchBreeds()
   })
   .catch(err => {
     Notify.failure(`Error fetching breeds: ${err}`);
-    error.classList.remove('is-hidden');
+    // error.classList.remove('is-hidden');
   });
 
 selectBreed.addEventListener('change', () => {
@@ -54,7 +54,7 @@ selectBreed.addEventListener('change', () => {
     })
     .catch(err => {
       Notify.failure(`Error fetching cat information: ${err}`);
-      error.classList.remove('is-hidden');
+      // error.classList.remove('is-hidden');
     })
     .finally(() => {
       loader.classList.add('is-hidden');
