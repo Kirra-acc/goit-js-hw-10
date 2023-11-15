@@ -1,3 +1,10 @@
 .is-hidden {
     visibility: hidden;
   }
+
+  .cat-img {
+    width: 250px;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
