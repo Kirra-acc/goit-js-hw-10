@@ -37,8 +37,11 @@ fetchBreeds()
     createOptions(res);
   })
   .catch(err => {
-    Notify.failure(`Error fetching breeds: ${err}`);
+    Notify.failure("Oops! Something went wrong! Try reloading the page!");
     // error.classList.remove('is-hidden');
+  })
+  .finally(() => {
+    loader.classList.add('is-hidden');
   });
 
 selectBreed.addEventListener('change', () => {
@@ -53,7 +56,7 @@ selectBreed.addEventListener('change', () => {
       catCard.innerHTML = createMarkup(res[0]);
     })
     .catch(err => {
-      Notify.failure(`Error fetching cat information: ${err}`);
+      Notify.failure("Oops! Something went wrong! Try reloading the page!");
       // error.classList.remove('is-hidden');
     })
     .finally(() => {
